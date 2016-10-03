@@ -1,0 +1,47 @@
+extends ./layout.jade
+
+block content
+  .tab-panels.tab-views(role='tabpanel')
+    ul.tab-panels--tab-list.tab-views--tab-list(role='tablist')
+      li.tab-panels--tab-list-item.tab-views--tab-list-item.base--li(role='presentation')
+        a.tab-panels--tab.tab-views--tab.active(href='/', aria-controls='panel1', role='tab') Probar
+      li.tab-panels--tab-list-item.tab-views--tab-list-item.base--li(role='presentation')
+        a.tab-panels--tab.tab-views--tab(href='/train', aria-controls='panel2', role='tab') Entrenar
+      li.tab-panels--tab-list-item.tab-views--tab-list-item.base--li(role='presentation')
+        a.tab-panels--tab.tab-views--tab(href='/admin', aria-controls='panel3', role='tab') Admin
+    .tab-panels--tab-content
+      .drone
+        img(src="/images/drone.gif")
+        span Lat: 
+          strong 10.026792
+        span , Long: 
+          strong -83.962099
+      .preview
+        .row
+          img(src="/images/criadero/1.png")
+          img(src="/images/criadero/2.png")
+          img(src="/images/criadero/3.png")
+          img(src="/images/criadero/4.png")
+        .row
+          img(src="/images/criadero/5.png")
+          img.criadero(src="/images/criadero/6.png")
+          img(src="/images/criadero/7.png")
+          img(src="/images/criadero/8.png")
+        .row
+          img(src="/images/criadero/9.png")
+          img(src="/images/criadero/10.png")
+          img(src="/images/criadero/11.png")
+          img(src="/images/criadero/12.png")
+        .row
+          img(src="/images/criadero/13.png")
+          img(src="/images/criadero/14.png")
+          img(src="/images/criadero/15.png")
+          img(src="/images/criadero/16.png")
+        div
+          button#testWithWatson.base--button Probar con Watson
+      .testing
+        div#fake-testing.loading.test--loading
+          .loader-container
+            svg.loader(viewBox='25 25 50 50')
+              circle.loader__path(cx='50', cy='50', r='20')
+          p.base--p.test--loading-message.loading--message Watson está clasificando las imágenes para determinar un match...
